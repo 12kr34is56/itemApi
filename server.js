@@ -15,7 +15,7 @@ const dbHost = 'mongodb+srv://commercekv2003:iphFdHXxDeM6lyfY@cluster123.mybud88
 mongoose.connect(dbHost).then(function(){
     //routes
     app.get('/', function (req, res) {
-        const response = { message: "API is working" };
+        const response = {statuscode: res.statusCode, message: "API is working" };
         res.json(response);
     });
     const itemRouter = require('./src/routes/item_routes');
